@@ -1,0 +1,3 @@
+select DATA_NAME where DATA_NAME like '/tempZone/home/%'
+select order_desc(DATA_SIZE), DATA_NAME, COLL_NAME where DATA_NAME like '/tempZone/home/%' and DATA_ID between '100' '1000' and DATA_SIZE between '400' '500' || in ('100', '150', '797', '9999') || = '3792' && != '12345'
+select col1, col2, sum(col3) where col4 like 'some string' and other_col = 'another string' and col2 in ('element one', 'element two', 'element three') || not like 'don''t be this string' && between 'this' 'that'
