@@ -11,7 +11,8 @@ default: example
 example:
 	flex -o $(flex_output_source) $(flex_input)
 	bison -o $(bison_output_source) $(bison_input)
-	g++ -Wall -Werror -std=c++11 example.cpp $(flex_output_source) $(bison_output_source) genquery_wrapper.cpp genquery_jsonify.cpp jsoncpp.cpp -o example
+	#g++ -Wall -Werror -Wno-sign-compare -std=c++14 example.cpp $(flex_output_source) $(bison_output_source) genquery_wrapper.cpp genquery_jsonify.cpp jsoncpp.cpp -o example
+	g++ -Wall -Werror -Wno-sign-compare -std=c++14 example.cpp $(flex_output_source) $(bison_output_source) genquery_wrapper.cpp genquery_stringify.cpp jsoncpp.cpp -o example
 
 .PHONY: clean
 clean:
